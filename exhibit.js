@@ -21,8 +21,17 @@ $(document).ready(function () {
 
 	$window
         .load(function(e) {
-            var size = 100 + ($window.height - 800) * .064
-            $('body').css('font-size', size + '%');
+            var size = 100 + ($window.height - 800) * .064;
+            $('body'). css('font-size', size + '%');
+            $('section').each(function () {
+            	var section = this;
+            	$($(this).find('.piece').get().reverse()).each(function () {
+            		var piece = this;
+            		var circle = $('<div class="icon-circle"></div>');
+            		circle.click(function () { giveAttentionH($(piece)); });
+            		$(section).find('h2').after(circle);
+            	});
+            });
         })
         .bind('mousewheel MozMousePixelScroll', function (e) {
             e.preventDefault();
@@ -69,7 +78,7 @@ $(document).ready(function () {
             var $attentionH = $attention.find('.attentionH');
             $attention.find('.wall').position().left = -$attentionH.position().left; 
             $window.scrollTop($attention.position().top);
-            var size = 100 + ($window.height() - 800) * .064
+            var size = 100 + ($window.height() - 800) * .064;
             console.log($window.height());
             $('body').css('font-size', size + '%');
         })
