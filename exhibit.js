@@ -6,12 +6,18 @@ $(document).ready(function () {
     // adjust drop shadows
     // cutting off letters?
     // resizing screws up picture dimensions / fixed by refresh
+    // refactor to get rid of onceper
+    // Parallax
 
-    // Important
+    // REFACTOR
+    // Get rid of onceper
+    // Use LESS / SASS
+
+    // IMPORTANT
     // social media
-    // body font javascript
-    // circle things
     // Fix IE
+    // Get rid of buffers
+    // Centering
 	var $window= $(window);
     var defaultAnimationTime = 700;
 
@@ -20,15 +26,25 @@ $(document).ready(function () {
     });
 
 	$window
-        .load(function(e) {
+        .load(function() {
             var size = 100 + ($window.height - 800) * .064;
             $('body'). css('font-size', size + '%');
             $('section').each(function () {
             	var section = this;
             	$($(this).find('.piece').get().reverse()).each(function () {
             		var piece = this;
-            		var circle = $('<div class="icon-circle"></div>');
-            		circle.click(function () { giveAttentionH($(piece)); });
+            		var circle;
+            		
+            		if ($(piece).hasClass('attentionH')) {
+            			circle = $('<div class="icon-circle dot"></div>');
+            		} else {
+            			circle = $('<div class="icon-circle-blank dot"></div>');
+            		}
+
+            		circle.click(function () { 
+            			giveAttentionH($(piece)); 
+            		});
+            		
             		$(section).find('h2').after(circle);
             	});
             });
@@ -36,8 +52,8 @@ $(document).ready(function () {
         .bind('mousewheel MozMousePixelScroll', function (e) {
             e.preventDefault();
             var $attention = $('.attention');
-            var $next = $($('.attention').next());
-            var $prev = $($('.attention').prev());
+            var $next = $($attention.next());
+            var $prev = $($attention.prev());
             var wheelDelta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
 
             if (wheelDelta / 120 > 0 && $prev.length !== 0) {
@@ -79,13 +95,12 @@ $(document).ready(function () {
             $attention.find('.wall').position().left = -$attentionH.position().left; 
             $window.scrollTop($attention.position().top);
             var size = 100 + ($window.height() - 800) * .064;
-            console.log($window.height());
             $('body').css('font-size', size + '%');
         })
-        .scroll(function (e) {
+        .scroll(function () {
             fixAttention();
         })
-        .mouseup(function (e)  {
+        .mouseup(function ()  {
             giveAttention($('.attention'));
         });
     
@@ -99,8 +114,8 @@ $(document).ready(function () {
                     return false;
                 }
             });
-        };
-        
+        }
+
     $('h2').click(function () {
         tryGiveAttention([$(this).parent()]);
     });
@@ -113,10 +128,15 @@ $(document).ready(function () {
         var $attention = $('.attention');
         var $attentionH = $attention.find('.attentionH');
         var $wall = $needy.parent();
+        var $section = $wall.parent();
+        var $dots = $section.find('.dot');
+        
+        $section.find('.icon-circle').removeClass('icon-circle').addClass('icon-circle-blank');
+        $($dots[$needy.index() / 2]).addClass('icon-circle').removeClass('icon-circle-blank');
 
         $wall.animate(
             {left: -$needy.position().left},
-            700);
+            defaultAnimationTime);
         $attentionH.removeClass('attentionH');
         $needy.addClass('attentionH');
     }
@@ -125,7 +145,7 @@ $(document).ready(function () {
         var $attention = $('.attention');
         $('body,html').animate(
             {scrollTop: $needy.position().top}, 
-            700);
+            defaultAnimationTime);
         $attention.removeClass('attention');
         $needy.addClass('attention');
     }
@@ -141,7 +161,7 @@ $(document).ready(function () {
                         canRun = true; 
                     }, period);
             }
-        }
+        };
     }
 
     var tryGiveAttention = oncePer(giveAttention, 500); 
