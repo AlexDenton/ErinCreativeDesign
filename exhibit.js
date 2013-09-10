@@ -15,21 +15,21 @@ $(document).ready(function () {
 
     // IMPORTANT
     // social media
-    // Fix IE
-    // Get rid of buffers
+    // Fix IE8 scrolling
+    // Get rid of buffers / move to width percentage
     // Centering
 	var $window= $(window);
     var defaultAnimationTime = 700;
 
-    Hammer(window).on('swipe', function(e) {
-        // alert('swiped!');
-    });
+//    Hammer(window).on('swipe', function(e) {
+//        // alert('swiped!');
+//    });
 
 	$window
         .load(function() {
             var size = 100 + ($window.height - 800) * .064;
             $('body'). css('font-size', size + '%');
-            $('section').each(function () {
+            $('.section').each(function () {
             	var section = this;
             	$($(this).find('.piece').get().reverse()).each(function () {
             		var piece = this;
@@ -49,7 +49,7 @@ $(document).ready(function () {
             	});
             });
         })
-        .bind('mousewheel MozMousePixelScroll', function (e) {
+        .bind('DOMMouseScroll mousewheel MozMousePixelScroll', function (e) {
             e.preventDefault();
             var $attention = $('.attention');
             var $next = $($attention.next());
@@ -64,11 +64,11 @@ $(document).ready(function () {
                 tryGiveAttention([$next]);
             }
         })
-        .keydown(function (e) {
+        .keypress(function (e) {
             e.preventDefault();
             var $attention = $('.attention');
-            var $next = $($attention.next('section'));
-            var $prev = $($attention.prev('section'));
+            var $next = $($attention.next('.section'));
+            var $prev = $($attention.prev('.section'));
             var $attentionH = $attention.find('.attentionH');
             var $nextH = $($attentionH.next().next());
             var $prevH = $($attentionH.prev().prev());
