@@ -7,8 +7,8 @@
     <file path="/Dummy.txt" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378856825824" ignored="false" />
     <file path="/a.js" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378426077307" ignored="false" />
     <file path="/exhibit.js" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378859212364" ignored="false" />
-    <file path="/home.css" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378864601342" ignored="false" />
-    <file path="/home.html" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378857315117" ignored="false" />
+    <file path="/home.css" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378865195922" ignored="false" />
+    <file path="/home.html" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378865814239" ignored="false" />
     <file path="/a.dummy" changelist="2af8d8fb-62ce-40f7-a0f9-703719e0582e" time="1378857669558" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,7 +32,7 @@
       <file leaf-file-name="exhibit.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exhibit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="74" selection-start="496" selection-end="496" vertical-scroll-proportion="0.59302324">
+            <state line="22" column="42" selection-start="608" selection-end="608" vertical-scroll-proportion="0.7248062">
               <folding />
             </state>
           </provider>
@@ -41,7 +41,7 @@
       <file leaf-file-name="home.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="27" selection-start="434" selection-end="434" vertical-scroll-proportion="71.68">
+            <state line="140" column="18" selection-start="2132" selection-end="2132" vertical-scroll-proportion="-15.36">
               <folding />
             </state>
           </provider>
@@ -50,7 +50,7 @@
       <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="26" selection-start="5372" selection-end="5372" vertical-scroll-proportion="-5.4155846">
+            <state line="12" column="56" selection-start="624" selection-end="624" vertical-scroll-proportion="-0.22077923">
               <folding />
             </state>
           </provider>
@@ -74,8 +74,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/home.css" />
+        <option value="$PROJECT_DIR$/home.html" />
         <option value="$PROJECT_DIR$/exhibit.js" />
       </list>
     </option>
@@ -274,7 +274,9 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/exhibit.js">
@@ -340,23 +342,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
+    <entry file="file://$PROJECT_DIR$/home.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="26" selection-start="5372" selection-end="5372" vertical-scroll-proportion="-5.4155846">
+        <state line="140" column="18" selection-start="2132" selection-end="2132" vertical-scroll-proportion="-15.36">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.css">
+    <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="434" selection-end="434" vertical-scroll-proportion="71.68">
+        <state line="12" column="56" selection-start="624" selection-end="624" vertical-scroll-proportion="-0.22077923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/exhibit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="74" selection-start="496" selection-end="496" vertical-scroll-proportion="0.59302324">
+        <state line="22" column="42" selection-start="608" selection-end="608" vertical-scroll-proportion="0.7248062">
           <folding />
         </state>
       </provider>

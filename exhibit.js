@@ -11,12 +11,16 @@ $(document).ready(function () {
 
     // REFACTOR
     // Use LESS / SASS
+    // renaming
 
     // IMPORTANT
     // social media
     // Fix IE8 scrolling
     // Centering
     // I think the iPhone issues are just the result of a narrow view port
+    // scrolling twice at the top
+    // mobile site
+    // suggest using keys / modern browser
 	var $window= $(window);
     var defaultAnimationTime = 700;
 
@@ -107,7 +111,7 @@ $(document).ready(function () {
         });
     
         function fixAttention() {
-            $('section').each(function () {
+            $('.section').each(function () {
                 var $this = $(this);
                 var $attention = $('.attention');
                 if ($this.position().top >= $window.scrollTop()) {

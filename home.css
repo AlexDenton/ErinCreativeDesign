@@ -138,4 +138,5 @@ h1:hover, .pic:hover, h2:hover {
     left: 2%;
     width: 10%;
     height: auto;
+    z-index: 1000;
 }
