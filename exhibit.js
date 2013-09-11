@@ -6,18 +6,17 @@ $(document).ready(function () {
     // adjust drop shadows
     // cutting off letters?
     // resizing screws up picture dimensions / fixed by refresh
-    // refactor to get rid of onceper
     // Parallax
+    // Look into setting width with javascript
 
     // REFACTOR
-    // Get rid of onceper
     // Use LESS / SASS
 
     // IMPORTANT
     // social media
     // Fix IE8 scrolling
-    // Get rid of buffers / move to width percentage
     // Centering
+    // I think the iPhone issues are just the result of a narrow view port
 	var $window= $(window);
     var defaultAnimationTime = 700;
 
@@ -27,8 +26,11 @@ $(document).ready(function () {
 
 	$window
         .load(function() {
+            // Set the body font size for scaling
             var size = 100 + ($window.height - 800) * .064;
             $('body'). css('font-size', size + '%');
+
+            // Populate the navigation dots
             $('.section').each(function () {
             	var section = this;
             	$($(this).find('.piece').get().reverse()).each(function () {
@@ -42,7 +44,7 @@ $(document).ready(function () {
             		}
 
             		circle.click(function () { 
-            			giveAttentionH($(piece)); 
+            			tryGiveAttentionH($(piece));
             		});
             		
             		$(section).find('h2').after(circle);
@@ -57,36 +59,36 @@ $(document).ready(function () {
             var wheelDelta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
 
             if (wheelDelta / 120 > 0 && $prev.length !== 0) {
-                tryGiveAttention([$prev]);
+                tryGiveAttention($prev);
             } 
             
             if (wheelDelta / 120 < 0 && $next.length !== 0) {
-                tryGiveAttention([$next]);
+                tryGiveAttention($next);
             }
         })
-        .keypress(function (e) {
+        .keydown(function (e) {
             e.preventDefault();
             var $attention = $('.attention');
             var $next = $($attention.next('.section'));
             var $prev = $($attention.prev('.section'));
             var $attentionH = $attention.find('.attentionH');
-            var $nextH = $($attentionH.next().next());
-            var $prevH = $($attentionH.prev().prev());
+            var $nextH = $($attentionH.next());
+            var $prevH = $($attentionH.prev());
 
             if (e.keyCode === 38 && $prev.length !== 0) {
-                tryGiveAttention([$prev]);
+                tryGiveAttention($prev);
             } 
             
             if (e.keyCode === 40 && $next.length !== 0) {
-                tryGiveAttention([$next]);
+                tryGiveAttention($next);
             }
 
             if (e.keyCode === 39 && $nextH.length !== 0) {
-                tryGiveAttentionH([$nextH]);
+                tryGiveAttentionH($nextH);
             }
 
             if (e.keyCode === 37 && $prevH.length !== 0) {
-                tryGiveAttentionH([$prevH]);
+                tryGiveAttentionH($prevH);
             }
         })
         .resize(function () {
@@ -101,7 +103,7 @@ $(document).ready(function () {
             fixAttention();
         })
         .mouseup(function ()  {
-            giveAttention($('.attention'));
+            tryGiveAttention($('.attention'));
         });
     
         function fixAttention() {
@@ -117,11 +119,11 @@ $(document).ready(function () {
         }
 
     $('h2').click(function () {
-        tryGiveAttention([$(this).parent()]);
+        tryGiveAttention($(this).parent());
     });
 
     $('.piece').click(function () {
-        tryGiveAttentionH([$(this)]);
+        tryGiveAttentionH($(this));
     });
 
     function giveAttentionH($needy) {
@@ -132,7 +134,7 @@ $(document).ready(function () {
         var $dots = $section.find('.dot');
         
         $section.find('.icon-circle').removeClass('icon-circle').addClass('icon-circle-blank');
-        $($dots[$needy.index() / 2]).addClass('icon-circle').removeClass('icon-circle-blank');
+        $($dots[$needy.index()]).addClass('icon-circle').removeClass('icon-circle-blank');
 
         $wall.animate(
             {left: -$needy.position().left},
@@ -150,21 +152,6 @@ $(document).ready(function () {
         $needy.addClass('attention');
     }
 
-    function oncePer(fn, period) {
-        var canRun = true;
-        return function (args) {
-            if (canRun) {
-                canRun = false;
-                fn.apply(this, args);
-                window.setTimeout(
-                    function() { 
-                        canRun = true; 
-                    }, period);
-            }
-        };
-    }
-
-    var tryGiveAttention = oncePer(giveAttention, 500); 
-    var tryGiveAttentionH = oncePer(giveAttentionH, 500); 
-
+    var tryGiveAttention = _.throttle(giveAttention, 500, {'leading': true, 'trailing': false});
+    var tryGiveAttentionH = _.throttle(giveAttentionH, 500, {'leading': true, 'trailing': false});
 });
