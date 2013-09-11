@@ -8,15 +8,16 @@ $(document).ready(function () {
     // resizing screws up picture dimensions / fixed by refresh
     // Parallax
     // Look into setting width with javascript
+    // Centering
 
     // REFACTOR
     // Use LESS / SASS
     // renaming
 
     // IMPORTANT
+    // new splash page
     // social media
     // Fix IE8 scrolling
-    // Centering
     // I think the iPhone issues are just the result of a narrow view port
     // scrolling twice at the top
     // mobile site
@@ -150,7 +151,7 @@ $(document).ready(function () {
     function giveAttention($needy) {
         var $attention = $('.attention');
         $('body,html').animate(
-            {scrollTop: $needy.position().top}, 
+            {scrollTop: $needy.position().top},
             defaultAnimationTime);
         $attention.removeClass('attention');
         $needy.addClass('attention');
