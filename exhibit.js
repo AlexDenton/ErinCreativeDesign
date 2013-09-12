@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // get swipe working
-    // css transitions / animations
+    // css transitions / animations / fallbacks
     // background texture
     // adjust drop shadows
     // cutting off letters?
@@ -9,19 +9,16 @@ $(document).ready(function () {
     // Parallax
     // Look into setting width with javascript
     // Centering
+    // I think the iPhone issues are just the result of a narrow view port
 
     // REFACTOR
     // Use LESS / SASS
     // renaming
 
     // IMPORTANT
-    // new splash page
-    // social media
-    // Fix IE8 scrolling
-    // I think the iPhone issues are just the result of a narrow view port
-    // scrolling twice at the top
+    // new splash page / social media
     // mobile site
-    // suggest using keys / modern browser
+    // suggest using keys / modern browser / modernizr
 	var $window= $(window);
     var defaultAnimationTime = 700;
 
@@ -29,7 +26,22 @@ $(document).ready(function () {
 //        // alert('swiped!');
 //    });
 
-	$window
+    $('body').mousewheel(function (e, delta) {
+        e.preventDefault();
+        var $attention = $('.attention');
+        var $next = $($attention.next('.section'));
+        var $prev = $($attention.prev('.section'));
+
+        if (delta / 120 > 0 && $prev.length !== 0) {
+            tryGiveAttention($prev);
+        }
+
+        if (delta / 120 < 0 && $next.length !== 0) {
+            tryGiveAttention($next);
+        }
+    });
+
+    $window
         .load(function() {
             // Set the body font size for scaling
             var size = 100 + ($window.height - 800) * .064;
@@ -55,21 +67,6 @@ $(document).ready(function () {
             		$(section).find('h2').after(circle);
             	});
             });
-        })
-        .bind('DOMMouseScroll mousewheel MozMousePixelScroll', function (e) {
-            e.preventDefault();
-            var $attention = $('.attention');
-            var $next = $($attention.next());
-            var $prev = $($attention.prev());
-            var wheelDelta = e.originalEvent.wheelDelta || -e.originalEvent.detail;
-
-            if (wheelDelta / 120 > 0 && $prev.length !== 0) {
-                tryGiveAttention($prev);
-            } 
-            
-            if (wheelDelta / 120 < 0 && $next.length !== 0) {
-                tryGiveAttention($next);
-            }
         })
         .keydown(function (e) {
             e.preventDefault();
@@ -104,7 +101,7 @@ $(document).ready(function () {
             var size = 100 + ($window.height() - 800) * .064;
             $('body').css('font-size', size + '%');
         })
-        .scroll(function () {
+        .scroll(function (e) {
             fixAttention();
         })
         .mouseup(function ()  {
