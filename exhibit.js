@@ -4,7 +4,6 @@ $(document).ready(function () {
     // css transitions / animations / fallbacks
     // background texture
     // adjust drop shadows
-    // cutting off letters?
     // resizing screws up picture dimensions / fixed by refresh
     // Parallax
     // Look into setting width with javascript
@@ -12,11 +11,9 @@ $(document).ready(function () {
     // I think the iPhone issues are just the result of a narrow view port
 
     // REFACTOR
-    // Use LESS / SASS
     // renaming
 
     // IMPORTANT
-    // new splash page / social media
     // mobile site
     // suggest using keys / modern browser / modernizr
 	var $window= $(window);
@@ -25,6 +22,33 @@ $(document).ready(function () {
 //    Hammer(window).on('swipe', function(e) {
 //        // alert('swiped!');
 //    });
+
+    function rotateSplash () {
+        var $splash = $('.splash');
+        var direction = 'forward';
+
+        window.setInterval(function () {
+            var $attentionH = $splash.find('.attentionH');
+            var $nextH = $($attentionH.next());
+            var $prevH = $($attentionH.prev());
+
+            if (direction === 'forward') {
+                if ($nextH.length === 0) {
+                    direction = 'backward';
+                    tryGiveAttentionH($prevH);
+                } else {
+                    tryGiveAttentionH($nextH);
+                }
+            } else if (direction === 'backward') {
+               if ($prevH.length === 0) {
+                   direction = 'forward';
+                   tryGiveAttentionH($nextH);
+               } else {
+                   tryGiveAttentionH($prevH);
+               }
+            }
+        }, 3000);
+    }
 
     $('body').mousewheel(function (e, delta) {
         e.preventDefault();
@@ -47,6 +71,8 @@ $(document).ready(function () {
             var size = 100 + ($window.height - 800) * .064;
             $('body'). css('font-size', size + '%');
 
+            rotateSplash();
+
             // Populate the navigation dots
             $('.section').each(function () {
             	var section = this;
@@ -64,7 +90,7 @@ $(document).ready(function () {
             			tryGiveAttentionH($(piece));
             		});
             		
-            		$(section).find('h2').after(circle);
+            		$(section).find('header').after(circle);
             	});
             });
         })
@@ -101,7 +127,7 @@ $(document).ready(function () {
             var size = 100 + ($window.height() - 800) * .064;
             $('body').css('font-size', size + '%');
         })
-        .scroll(function (e) {
+        .scroll(function () {
             fixAttention();
         })
         .mouseup(function ()  {
@@ -129,20 +155,22 @@ $(document).ready(function () {
     });
 
     function giveAttentionH($needy) {
-        var $attention = $('.attention');
-        var $attentionH = $attention.find('.attentionH');
-        var $wall = $needy.parent();
-        var $section = $wall.parent();
-        var $dots = $section.find('.dot');
-        
-        $section.find('.icon-circle').removeClass('icon-circle').addClass('icon-circle-blank');
-        $($dots[$needy.index()]).addClass('icon-circle').removeClass('icon-circle-blank');
+        if ($needy) {
+            var $attention = $('.attention');
+            var $attentionH = $attention.find('.attentionH');
+            var $wall = $needy.parent();
+            var $section = $wall.parent();
+            var $dots = $section.find('.dot');
 
-        $wall.animate(
-            {left: -$needy.position().left},
-            defaultAnimationTime);
-        $attentionH.removeClass('attentionH');
-        $needy.addClass('attentionH');
+            $section.find('.icon-circle').removeClass('icon-circle').addClass('icon-circle-blank');
+            $($dots[$needy.index()]).addClass('icon-circle').removeClass('icon-circle-blank');
+
+            $wall.animate(
+                {left: -$needy.position().left},
+                defaultAnimationTime);
+            $attentionH.removeClass('attentionH');
+            $needy.addClass('attentionH');
+        }
     }
 
     function giveAttention($needy) {
