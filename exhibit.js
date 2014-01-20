@@ -1,13 +1,12 @@
 $(document).ready(function () {
 
     // TODO
-    // Bigger log image
+    // Bigger logo image
     // Picture icons?
     // get swipe working
     // css transitions / animations / fallbacks
-    // background texture
+    // background texture? parallax?
     // resizing screws up picture dimensions / fixed by refresh
-    // Parallax
     // Look into setting width with javascript
     // Centering
     // I think the iPhone issues are just the result of a narrow view port
