@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="Fixed rotate function.  Refactored css classes">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/colors.less" afterPath="$PROJECT_DIR$/colors.less" />
+    <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exhibit.js" afterPath="$PROJECT_DIR$/exhibit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.css" afterPath="$PROJECT_DIR$/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.less" afterPath="$PROJECT_DIR$/home.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,7 +40,7 @@
       <file leaf-file-name="home.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="190" column="0" selection-start="3116" selection-end="3116" vertical-scroll-proportion="-12.28" vertical-offset="2733" max-vertical-offset="3584">
+            <state line="47" column="16" selection-start="957" selection-end="957" vertical-scroll-proportion="-30.08" vertical-offset="0" max-vertical-offset="3600">
               <folding />
             </state>
           </provider>
@@ -51,7 +49,7 @@
       <file leaf-file-name="exhibit.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/exhibit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.3316062" vertical-offset="0" max-vertical-offset="3264">
+            <state line="32" column="9" selection-start="893" selection-end="893" vertical-scroll-proportion="0.88428324" vertical-offset="0" max-vertical-offset="3296">
               <folding />
             </state>
           </provider>
@@ -100,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/home.css" />
         <option value="$PROJECT_DIR$/colors.less" />
-        <option value="$PROJECT_DIR$/home.less" />
         <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/home.less" />
         <option value="$PROJECT_DIR$/exhibit.js" />
       </list>
     </option>
@@ -304,15 +302,23 @@
       <created>1389985435824</created>
       <updated>1389985435824</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed rotate function.  Refactored css classes.">
+      <created>1390247874952</created>
+      <updated>1390247874952</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed dot bug.&#10;">
+      <created>1390248566318</created>
+      <updated>1390248566318</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-1" width="1282" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.337763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.087486155" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984577" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -365,7 +371,9 @@
     </option>
     <MESSAGE value="Refactoring. New splash page." />
     <MESSAGE value="Fixed rotate function.  Refactored css classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed rotate function.  Refactored css classes" />
+    <MESSAGE value="Fixed rotate function.  Refactored css classes." />
+    <MESSAGE value="Fixed dot bug.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed dot bug.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -579,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="0" selection-start="3116" selection-end="3116" vertical-scroll-proportion="-12.28" vertical-offset="2733" max-vertical-offset="3584">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="10" selection-start="682" selection-end="682" vertical-scroll-proportion="-7.68" vertical-offset="0" max-vertical-offset="5520">
@@ -593,9 +594,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="16" selection-start="957" selection-end="957" vertical-scroll-proportion="-30.08" vertical-offset="0" max-vertical-offset="3600">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/exhibit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="368" selection-end="368" vertical-scroll-proportion="0.3316062" vertical-offset="0" max-vertical-offset="3264">
+        <state line="32" column="9" selection-start="893" selection-end="893" vertical-scroll-proportion="0.88428324" vertical-offset="0" max-vertical-offset="3296">
           <folding />
         </state>
       </provider>
