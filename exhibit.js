@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // TODO
+    // Bigger log image
+    // Picture icons?
     // get swipe working
     // css transitions / animations / fallbacks
     // background texture
@@ -49,16 +52,16 @@ $(document).ready(function () {
             if (direction === 'forward') {
                 if ($nextH.length === 0) {
                     direction = 'backward';
-                    focusPiece($prevH, $splash);
+                    tryFocusPiece($prevH, $splash);
                 } else {
-                    focusPiece($nextH, $splash);
+                    tryFocusPiece($nextH, $splash);
                 }
             } else if (direction === 'backward') {
                if ($prevH.length === 0) {
                    direction = 'forward';
-                   focusPiece($nextH, $splash);
+                   tryFocusPiece($nextH, $splash);
                } else {
-                   focusPiece($prevH, $splash);
+                   tryFocusPiece($prevH, $splash);
                }
             }
         }, defaultRotationTime);
@@ -89,7 +92,7 @@ $(document).ready(function () {
 
             // Populate the navigation dots
             $('.section').each(function () {
-            	var $section = this;
+            	var section = this;
             	$($(this).find('.piece').get().reverse()).each(function () {
             		var piece = this;
             		var circle;
@@ -101,10 +104,10 @@ $(document).ready(function () {
             		}
 
             		circle.click(function () { 
-            			tryFocusPiece($(piece), $section);
+            			tryFocusPiece($(piece), $(section));
             		});
             		
-            		$($section).find('header').after(circle);
+            		$(section).find('header').after(circle);
             	});
             });
         })
