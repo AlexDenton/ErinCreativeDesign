@@ -10,6 +10,52 @@
   src: url('lib/Rockwell.eot?') format('eot'), url('lib/Rockwell.woff') format('woff'), url('lib/Rockwell.ttf') format('truetype');
 }
 
+.about {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 1000;
+  width: 50%;
+
+  .about-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 200%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid @exhibit-shadow;
+
+    position: absolute;
+    right: 3%;
+    margin-top: 4%;
+    display: none;
+  }
+
+  .about-info {
+    position: absolute;
+    margin-top: 7%;
+    right: 0%;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 3px @exhibit-shadow;
+    padding: 2%;
+
+    display: none;
+  }
+}
+
+
 .contact {
   @contact-top: 22%;
   @contact-left: 5.4%;
@@ -103,8 +149,7 @@
         height: 60%;
         width: auto;
         margin-right: 5%;
-        box-shadow: 5px 5px 5px 5px #E6E6E6;
-        -webkit-box-shadow: 1px 1px 5px 3px #E6E6E6;
+        box-shadow: 1px 1px 5px 3px @exhibit-shadow;
         max-width: 90%;
       }
     }

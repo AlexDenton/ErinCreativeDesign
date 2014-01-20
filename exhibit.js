@@ -3,7 +3,6 @@ $(document).ready(function () {
     // get swipe working
     // css transitions / animations / fallbacks
     // background texture
-    // adjust drop shadows
     // resizing screws up picture dimensions / fixed by refresh
     // Parallax
     // Look into setting width with javascript
@@ -11,57 +10,72 @@ $(document).ready(function () {
     // I think the iPhone issues are just the result of a narrow view port
 
     // REFACTOR
-    // renaming
+    // angular
 
     // IMPORTANT
     // mobile site
-    // suggest using keys / modern browser / modernizr
+    // suggest using keys / modern browser (modernizr)
 	var $window= $(window);
     var defaultAnimationTime = 700;
+    var defaultThrottleTime = 500;
+    var defaultRotationTime = 3000;
 
 //    Hammer(window).on('swipe', function(e) {
 //        // alert('swiped!');
 //    });
+
+    window.toggleAbout = function toggleAbout() {
+        var $aboutInfo = $('.about-info');
+        var $arrowUp = $('.arrow-up');
+
+        if ($aboutInfo.is(':visible')) {
+            $aboutInfo.hide();
+            $arrowUp.hide();
+        } else {
+            $aboutInfo.show();
+            $arrowUp.show();
+        }
+    };
 
     function rotateSplash () {
         var $splash = $('.splash');
         var direction = 'forward';
 
         window.setInterval(function () {
-            var $attentionH = $splash.find('.attentionH');
-            var $nextH = $($attentionH.next());
-            var $prevH = $($attentionH.prev());
+            var $currentFocusedPiece = $splash.find('.focused-piece');
+            var $nextH = $($currentFocusedPiece.next());
+            var $prevH = $($currentFocusedPiece.prev());
 
             if (direction === 'forward') {
                 if ($nextH.length === 0) {
                     direction = 'backward';
-                    tryGiveAttentionH($prevH);
+                    focusPiece($prevH, $splash);
                 } else {
-                    tryGiveAttentionH($nextH);
+                    focusPiece($nextH, $splash);
                 }
             } else if (direction === 'backward') {
                if ($prevH.length === 0) {
                    direction = 'forward';
-                   tryGiveAttentionH($nextH);
+                   focusPiece($nextH, $splash);
                } else {
-                   tryGiveAttentionH($prevH);
+                   focusPiece($prevH, $splash);
                }
             }
-        }, 3000);
+        }, defaultRotationTime);
     }
 
     $('body').mousewheel(function (e, delta) {
         e.preventDefault();
-        var $attention = $('.attention');
-        var $next = $($attention.next('.section'));
-        var $prev = $($attention.prev('.section'));
+        var $currentFocusedSection = $('.focused-section');
+        var $next = $($currentFocusedSection.next('.section'));
+        var $prev = $($currentFocusedSection.prev('.section'));
 
         if (delta / 120 > 0 && $prev.length !== 0) {
-            tryGiveAttention($prev);
+            tryFocusSection($prev);
         }
 
         if (delta / 120 < 0 && $next.length !== 0) {
-            tryGiveAttention($next);
+            tryFocusSection($next);
         }
     });
 
@@ -75,113 +89,111 @@ $(document).ready(function () {
 
             // Populate the navigation dots
             $('.section').each(function () {
-            	var section = this;
+            	var $section = this;
             	$($(this).find('.piece').get().reverse()).each(function () {
             		var piece = this;
             		var circle;
             		
-            		if ($(piece).hasClass('attentionH')) {
+            		if ($(piece).hasClass('focused-piece')) {
             			circle = $('<div class="icon-circle dot"></div>');
             		} else {
             			circle = $('<div class="icon-circle-blank dot"></div>');
             		}
 
             		circle.click(function () { 
-            			tryGiveAttentionH($(piece));
+            			tryFocusPiece($(piece), $section);
             		});
             		
-            		$(section).find('header').after(circle);
+            		$($section).find('header').after(circle);
             	});
             });
         })
         .keydown(function (e) {
             e.preventDefault();
-            var $attention = $('.attention');
-            var $next = $($attention.next('.section'));
-            var $prev = $($attention.prev('.section'));
-            var $attentionH = $attention.find('.attentionH');
-            var $nextH = $($attentionH.next());
-            var $prevH = $($attentionH.prev());
+            var $currentFocusedSection = $('.focused-section');
+            var $next = $($currentFocusedSection.next('.section'));
+            var $prev = $($currentFocusedSection.prev('.section'));
+            var $currentFocusedPiece = $currentFocusedSection.find('.focused-piece');
+            var $nextH = $($currentFocusedPiece.next());
+            var $prevH = $($currentFocusedPiece.prev());
 
             if (e.keyCode === 38 && $prev.length !== 0) {
-                tryGiveAttention($prev);
+                tryFocusSection($prev);
             } 
             
             if (e.keyCode === 40 && $next.length !== 0) {
-                tryGiveAttention($next);
+                tryFocusSection($next);
             }
 
             if (e.keyCode === 39 && $nextH.length !== 0) {
-                tryGiveAttentionH($nextH);
+                tryFocusPiece($nextH, $currentFocusedSection);
             }
 
             if (e.keyCode === 37 && $prevH.length !== 0) {
-                tryGiveAttentionH($prevH);
+                tryFocusPiece($prevH, $currentFocusedSection);
             }
         })
         .resize(function () {
-            var $attention = $('.attention');
-            var $attentionH = $attention.find('.attentionH');
-            $attention.find('.wall').position().left = -$attentionH.position().left; 
-            $window.scrollTop($attention.position().top);
+            var $currentFocusedSection = $('.focused-section');
+            var $currentFocusedPiece = $currentFocusedSection.find('.focused-piece');
+            $currentFocusedSection.find('.wall').position().left = -$currentFocusedPiece.position().left;
+            $window.scrollTop($currentFocusedSection.position().top);
             var size = 100 + ($window.height() - 800) * .064;
             $('body').css('font-size', size + '%');
         })
         .scroll(function () {
-            fixAttention();
+            fixFocus();
         })
         .mouseup(function ()  {
-            tryGiveAttention($('.attention'));
+            tryFocusSection($('.focused-section'));
         });
     
-        function fixAttention() {
+        function fixFocus() {
             $('.section').each(function () {
                 var $this = $(this);
-                var $attention = $('.attention');
+                var $attention = $('.focused-section');
                 if ($this.position().top >= $window.scrollTop()) {
-                    $attention.removeClass('attention');
-                    $this.addClass('attention');
+                    $attention.removeClass('focused-section');
+                    $this.addClass('focused-section');
                     return false;
                 }
             });
         }
 
     $('h2').click(function () {
-        tryGiveAttention($(this).parent());
+        tryFocusSection($(this).parent());
     });
 
     $('.piece').click(function () {
-        tryGiveAttentionH($(this));
+        tryFocusPiece($(this), $('.focused-section'));
     });
 
-    function giveAttentionH($needy) {
-        if ($needy) {
-            var $attention = $('.attention');
-            var $attentionH = $attention.find('.attentionH');
-            var $wall = $needy.parent();
-            var $section = $wall.parent();
+    function focusPiece($newFocusedPiece, $section) {
+        if ($newFocusedPiece) {
+            var $currentFocusedPiece = $section.find('.focused-piece');
+            var $wall = $newFocusedPiece.parent();
             var $dots = $section.find('.dot');
 
             $section.find('.icon-circle').removeClass('icon-circle').addClass('icon-circle-blank');
-            $($dots[$needy.index()]).addClass('icon-circle').removeClass('icon-circle-blank');
+            $($dots[$newFocusedPiece.index()]).addClass('icon-circle').removeClass('icon-circle-blank');
 
             $wall.animate(
-                {left: -$needy.position().left},
+                {left: -$newFocusedPiece.position().left},
                 defaultAnimationTime);
-            $attentionH.removeClass('attentionH');
-            $needy.addClass('attentionH');
+            $currentFocusedPiece.removeClass('focused-piece');
+            $newFocusedPiece.addClass('focused-piece');
         }
     }
 
-    function giveAttention($needy) {
-        var $attention = $('.attention');
+    function focusSection($newFocusedSection) {
+        var $currentFocusedSection = $('.focused-section');
         $('body,html').animate(
-            {scrollTop: $needy.position().top},
+            {scrollTop: $newFocusedSection.position().top},
             defaultAnimationTime);
-        $attention.removeClass('attention');
-        $needy.addClass('attention');
+        $currentFocusedSection.removeClass('focused-section');
+        $newFocusedSection.addClass('focused-section');
     }
 
-    var tryGiveAttention = _.throttle(giveAttention, 500, {'leading': true, 'trailing': false});
-    var tryGiveAttentionH = _.throttle(giveAttentionH, 500, {'leading': true, 'trailing': false});
+    var tryFocusSection = _.throttle(focusSection, defaultThrottleTime, {'leading': true, 'trailing': false});
+    var tryFocusPiece = _.throttle(focusPiece, defaultThrottleTime, {'leading': true, 'trailing': false});
 });

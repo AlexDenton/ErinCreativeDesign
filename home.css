@@ -6,6 +6,44 @@
   font-family: Rockwell;
   src: url('lib/Rockwell.eot?') format('eot'), url('lib/Rockwell.woff') format('woff'), url('lib/Rockwell.ttf') format('truetype');
 }
+.about {
+  position: fixed;
+  top: 2%;
+  right: 2%;
+  z-index: 1000;
+  width: 50%;
+}
+.about .about-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 200%;
+}
+.about .about-button:hover {
+  cursor: pointer;
+}
+.about .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid #5a5a5a;
+  position: absolute;
+  right: 3%;
+  margin-top: 4%;
+  display: none;
+}
+.about .about-info {
+  position: absolute;
+  margin-top: 7%;
+  right: 0%;
+  height: auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 3px #5a5a5a;
+  padding: 2%;
+  display: none;
+}
 .contact {
   color: #2b2b2b;
   position: fixed;
@@ -78,8 +116,7 @@
   height: 60%;
   width: auto;
   margin-right: 5%;
-  box-shadow: 5px 5px 5px 5px #E6E6E6;
-  -webkit-box-shadow: 1px 1px 5px 3px #E6E6E6;
+  box-shadow: 1px 1px 5px 3px #5a5a5a;
   max-width: 90%;
 }
 footer {
