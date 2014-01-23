@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.css" afterPath="$PROJECT_DIR$/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.less" afterPath="$PROJECT_DIR$/home.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ErinCreativeDesign.iws" />
@@ -31,7 +29,7 @@
       <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="100" selection-start="844" selection-end="844" vertical-scroll-proportion="0.3844732" vertical-offset="0" max-vertical-offset="5552">
+            <state line="14" column="10" selection-start="857" selection-end="857" vertical-scroll-proportion="0.41404805" vertical-offset="0" max-vertical-offset="5552">
               <folding />
             </state>
           </provider>
@@ -322,7 +320,11 @@
       <created>1390446867537</created>
       <updated>1390446867537</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="testing.">
+      <created>1390447145530</created>
+      <updated>1390447145530</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -388,7 +390,8 @@
     <MESSAGE value="Changed styling for about area." />
     <MESSAGE value="Changed styling for about area.&#10;" />
     <MESSAGE value="Changed rotation timing.  Added some iOS meta tags." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed rotation timing.  Added some iOS meta tags." />
+    <MESSAGE value="testing." />
+    <option name="LAST_COMMIT_MESSAGE" value="testing." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -653,7 +656,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="100" selection-start="844" selection-end="844" vertical-scroll-proportion="0.3844732" vertical-offset="0" max-vertical-offset="5552">
+        <state line="14" column="10" selection-start="857" selection-end="857" vertical-scroll-proportion="0.41404805" vertical-offset="0" max-vertical-offset="5552">
           <folding />
         </state>
       </provider>
