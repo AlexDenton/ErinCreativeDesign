@@ -29,7 +29,7 @@
       <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="857" selection-end="857" vertical-scroll-proportion="0.41404805" vertical-offset="0" max-vertical-offset="5552">
+            <state line="13" column="79" selection-start="823" selection-end="823" vertical-scroll-proportion="0.3844732" vertical-offset="0" max-vertical-offset="5552">
               <folding />
             </state>
           </provider>
@@ -324,7 +324,11 @@
       <created>1390447145530</created>
       <updated>1390447145530</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="testing.&#10;">
+      <created>1390447245093</created>
+      <updated>1390447245093</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -391,7 +395,8 @@
     <MESSAGE value="Changed styling for about area.&#10;" />
     <MESSAGE value="Changed rotation timing.  Added some iOS meta tags." />
     <MESSAGE value="testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="testing." />
+    <MESSAGE value="testing.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -656,7 +661,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="857" selection-end="857" vertical-scroll-proportion="0.41404805" vertical-offset="0" max-vertical-offset="5552">
+        <state line="13" column="79" selection-start="823" selection-end="823" vertical-scroll-proportion="0.3844732" vertical-offset="0" max-vertical-offset="5552">
           <folding />
         </state>
       </provider>
