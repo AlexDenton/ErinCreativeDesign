@@ -126,6 +126,7 @@ footer {
 }
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 html,
 body {
@@ -135,7 +136,6 @@ body {
   font-family: 'Rockwell';
   color: #2b2b2b;
   font-size: 100%;
-  overflow-x: hidden;
 }
 header {
   display: inline;
