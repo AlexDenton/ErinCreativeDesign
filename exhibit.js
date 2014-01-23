@@ -20,7 +20,7 @@ $(document).ready(function () {
 	var $window= $(window);
     var defaultAnimationTime = 700;
     var defaultThrottleTime = 500;
-    var defaultRotationTime = 3000;
+    var defaultRotationTime = 10000;
 
 //    Hammer(window).on('swipe', function(e) {
 //        // alert('swiped!');
@@ -189,7 +189,7 @@ $(document).ready(function () {
 
     function focusSection($newFocusedSection) {
         var $currentFocusedSection = $('.focused-section');
-        $('body,html').animate(
+        $(document.documentElement).stop().animate(
             {scrollTop: $newFocusedSection.position().top},
             defaultAnimationTime);
         $currentFocusedSection.removeClass('focused-section');
