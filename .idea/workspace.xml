@@ -39,7 +39,7 @@
       <file leaf-file-name="home.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="176" column="2" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.7172414" vertical-offset="2400" max-vertical-offset="3600">
+            <state line="180" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.94482756" vertical-offset="2332" max-vertical-offset="3648">
               <folding />
             </state>
           </provider>
@@ -365,7 +365,11 @@
       <created>1391379596590</created>
       <updated>1391379596590</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="testing iphone.&#10;">
+      <created>1391379671712</created>
+      <updated>1391379671712</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -734,7 +738,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="176" column="2" selection-start="2953" selection-end="2953" vertical-scroll-proportion="0.7172414" vertical-offset="2400" max-vertical-offset="3600">
+        <state line="180" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.94482756" vertical-offset="2332" max-vertical-offset="3648">
           <folding />
         </state>
       </provider>
