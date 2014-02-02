@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.less" afterPath="$PROJECT_DIR$/home.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.css" afterPath="$PROJECT_DIR$/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ErinCreativeDesign.iws" />
@@ -38,7 +38,7 @@
       <file leaf-file-name="home.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="12" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.4413793" vertical-offset="2496" max-vertical-offset="3600">
+            <state line="176" column="17" selection-start="2965" selection-end="2965" vertical-scroll-proportion="0.31034482" vertical-offset="2636" max-vertical-offset="3600">
               <folding />
             </state>
           </provider>
@@ -348,7 +348,11 @@
       <created>1391377629182</created>
       <updated>1391377629182</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="testing iphone.&#10;">
+      <created>1391377880921</created>
+      <updated>1391377880921</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -717,7 +721,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="12" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.4413793" vertical-offset="2496" max-vertical-offset="3600">
+        <state line="176" column="17" selection-start="2965" selection-end="2965" vertical-scroll-proportion="0.31034482" vertical-offset="2636" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
