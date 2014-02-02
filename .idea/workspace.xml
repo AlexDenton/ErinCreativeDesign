@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/exhibit.js" afterPath="$PROJECT_DIR$/exhibit.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.css" afterPath="$PROJECT_DIR$/home.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.less" afterPath="$PROJECT_DIR$/home.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -39,7 +40,7 @@
       <file leaf-file-name="home.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.94482756" vertical-offset="2332" max-vertical-offset="3648">
+            <state line="167" column="2" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.5637931" vertical-offset="2345" max-vertical-offset="3648">
               <folding />
             </state>
           </provider>
@@ -48,7 +49,7 @@
       <file leaf-file-name="exhibit.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/exhibit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="175" column="49" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.0" vertical-offset="2742" max-vertical-offset="3296">
+            <state line="90" column="12" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="3344">
               <folding />
             </state>
           </provider>
@@ -97,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/home.css" />
         <option value="$PROJECT_DIR$/colors.less" />
-        <option value="$PROJECT_DIR$/exhibit.js" />
         <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/exhibit.js" />
         <option value="$PROJECT_DIR$/home.less" />
       </list>
     </option>
@@ -369,7 +370,11 @@
       <created>1391379671712</created>
       <updated>1391379671712</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="testing iphone.&#10;">
+      <created>1391379764102</created>
+      <updated>1391379764102</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -722,13 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/exhibit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="49" selection-start="5911" selection-end="5911" vertical-scroll-proportion="0.0" vertical-offset="2742" max-vertical-offset="3296">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="323" column="203" selection-start="13737" selection-end="13737" vertical-scroll-proportion="-19.2" vertical-offset="4688" max-vertical-offset="5552">
@@ -736,9 +734,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/exhibit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="90" column="12" selection-start="2822" selection-end="2822" vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="3344">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="0" selection-start="2977" selection-end="2977" vertical-scroll-proportion="0.94482756" vertical-offset="2332" max-vertical-offset="3648">
+        <state line="167" column="2" selection-start="2810" selection-end="2810" vertical-scroll-proportion="0.5637931" vertical-offset="2345" max-vertical-offset="3648">
           <folding />
         </state>
       </provider>
