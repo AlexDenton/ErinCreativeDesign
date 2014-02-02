@@ -86,9 +86,6 @@ $(document).ready(function () {
             // Set the body font size for scaling
             var size = 100 + ($window.height - 800) * .064;
             $('body').css('font-size', size + '%');
-            if (window.navigator.userAgent.match(/iPhone/)) {
-                $('html').css('overflow-x', 'hidden');
-            }
 
             rotateSplash();
 
