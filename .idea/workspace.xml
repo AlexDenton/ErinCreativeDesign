@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="testing iphone.&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.css" afterPath="$PROJECT_DIR$/home.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
+    <list default="true" id="2af8d8fb-62ce-40f7-a0f9-703719e0582e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.less" afterPath="$PROJECT_DIR$/home.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,19 +26,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="323" column="203" selection-start="13737" selection-end="13737" vertical-scroll-proportion="0.84656084" vertical-offset="4688" max-vertical-offset="5552">
+            <state line="323" column="203" selection-start="13737" selection-end="13737" vertical-scroll-proportion="-19.2" vertical-offset="4688" max-vertical-offset="5552">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/home.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="161" column="22" selection-start="2760" selection-end="2760" vertical-scroll-proportion="-3.2" vertical-offset="2496" max-vertical-offset="3600">
+            <state line="172" column="12" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.4413793" vertical-offset="2496" max-vertical-offset="3600">
               <folding />
             </state>
           </provider>
@@ -346,15 +344,19 @@
       <created>1391375723759</created>
       <updated>1391375723759</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="testing iphone.&#10;">
+      <created>1391377629182</created>
+      <updated>1391377629182</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="1279" y="25" width="1682" height="1026" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.337763" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890365" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.08729282" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24984577" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -706,16 +708,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.less">
+    <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="22" selection-start="2760" selection-end="2760" vertical-scroll-proportion="-3.2" vertical-offset="2496" max-vertical-offset="3600">
+        <state line="323" column="203" selection-start="13737" selection-end="13737" vertical-scroll-proportion="-19.2" vertical-offset="4688" max-vertical-offset="5552">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
+    <entry file="file://$PROJECT_DIR$/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="323" column="203" selection-start="13737" selection-end="13737" vertical-scroll-proportion="0.84656084" vertical-offset="4688" max-vertical-offset="5552">
+        <state line="172" column="12" selection-start="2874" selection-end="2874" vertical-scroll-proportion="0.4413793" vertical-offset="2496" max-vertical-offset="3600">
           <folding />
         </state>
       </provider>
