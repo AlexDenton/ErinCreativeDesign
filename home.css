@@ -130,13 +130,11 @@ body {
 }
 html,
 body {
-  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'Rockwell';
   color: #2b2b2b;
   font-size: 100%;
-  overflow-x: hidden;
 }
 header {
   display: inline;
