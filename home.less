@@ -134,24 +134,27 @@
   .wall {
     position: relative;
     width: 350%;
-    height: 175%;
     padding-top: 1.2%;
+    height: 80%;
 
     .piece {
       display: inline-block;
       width: 6%;
-      height: 60%;
+      height: 100%;
+      float: left;
 
       p {
         color: @exhibit-description-gray;
+        float: left;
+        width: 20%;
+        margin-left: 3%;
       }
 
       .pic {
-        height: 60%;
-        width: auto;
-        margin-right: 5%;
+        float: left;
+        max-height: 90%;
+        max-width: 70%;
         box-shadow: 1px 1px 5px 3px @exhibit-shadow;
-        max-width: 90%;
       }
     }
   }
@@ -165,6 +168,7 @@ footer {
 
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 html, body {
@@ -174,7 +178,6 @@ html, body {
   color: @exhibit-default-gray;
   font-size: 100%;
   height: 100%;
-  overflow-x: hidden;
 }
 
 header {

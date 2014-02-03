@@ -1,21 +1,23 @@
 $(document).ready(function () {
 
     // TODO
-    // Bigger logo image
-    // Picture icons?
     // get swipe working
+    // Hide image info when not in focus
     // css transitions / animations / fallbacks
     // background texture? parallax?
-    // resizing screws up picture dimensions / fixed by refresh
     // Look into setting width with javascript
     // Centering
-    // I think the iPhone issues are just the result of a narrow view port
+
+    // Erin
+    // Bigger logo image
+    // About copy
+    // Picture icons?
 
     // REFACTOR
     // angular
 
     // IMPORTANT
-    // mobile site
+    // mobile site?
     // suggest using keys / modern browser (modernizr)
 	var $window= $(window);
     var defaultAnimationTime = 700;
